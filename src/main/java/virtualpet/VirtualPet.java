@@ -4,14 +4,13 @@ public class VirtualPet {
 
 	private String name;
 	private String description;
-	private int health; 
-	private int thirst; 
-	private int sleepy; 
-	private int poopy; 
+	private int health;
+	private int thirst;
+	private int sleepy;
+	private int poopy;
 	private int hunger;
-	private int happy; 
+	private int happy;
 
-	
 	public VirtualPet() {
 		setName("Bob");
 		setDescription("Wombat");
@@ -22,13 +21,13 @@ public class VirtualPet {
 		setHappy(90);
 		setPoopy(20);
 	}
-	
+
 	public int getHealth() {
 		return health;
 	}
-	
+
 	private void setHealth(int health) {
-		this.health = health;
+		this.health = boundsFit(health);
 	}
 
 	public int getHunger() {
@@ -36,7 +35,7 @@ public class VirtualPet {
 	}
 
 	private void setHunger(int hunger) {
-		this.hunger = hunger;
+		this.hunger = boundsFit(hunger);
 	}
 
 	public int getPoopy() {
@@ -44,7 +43,7 @@ public class VirtualPet {
 	}
 
 	private void setPoopy(int poopy) {
-		this.poopy = poopy;
+		this.poopy = boundsFit(poopy);
 	}
 
 	public int getSleepy() {
@@ -52,7 +51,7 @@ public class VirtualPet {
 	}
 
 	private void setSleepy(int sleepy) {
-		this.sleepy = sleepy;
+		this.sleepy = boundsFit(sleepy);
 	}
 
 	public int getThirst() {
@@ -60,7 +59,7 @@ public class VirtualPet {
 	}
 
 	private void setThirst(int thirst) {
-		this.thirst = thirst;
+		this.thirst = boundsFit(thirst);
 	}
 
 	public int getHappy() {
@@ -68,7 +67,7 @@ public class VirtualPet {
 	}
 
 	private void setHappy(int happy) {
-		this.happy = happy;
+		this.happy = boundsFit(happy);
 	}
 
 	public String getName() {
@@ -87,6 +86,9 @@ public class VirtualPet {
 		this.description = description;
 	}
 	
-	
-
+	private int boundsFit(int num) {
+		if (num < 0) num = 0;
+		if (num > 100) num = 100;
+		return num;
+	}
 }
