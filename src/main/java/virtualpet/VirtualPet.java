@@ -12,8 +12,8 @@ public class VirtualPet {
 	private int happy;
 
 	public VirtualPet() {
-		setName("Bob");
-		setDescription("Wombat");
+		setName("ThortonBurg");
+		setDescription("Blue Bellied Snark");
 		setHealth(90);
 		setHunger(20);
 		setThirst(20);
@@ -26,7 +26,7 @@ public class VirtualPet {
 		return health;
 	}
 
-	private void setHealth(int health) {
+	public void setHealth(int health) {
 		this.health = boundsFit(health);
 	}
 
@@ -34,7 +34,7 @@ public class VirtualPet {
 		return hunger;
 	}
 
-	private void setHunger(int hunger) {
+	public void setHunger(int hunger) {
 		this.hunger = boundsFit(hunger);
 	}
 
@@ -42,7 +42,7 @@ public class VirtualPet {
 		return poopy;
 	}
 
-	private void setPoopy(int poopy) {
+	public void setPoopy(int poopy) {
 		this.poopy = boundsFit(poopy);
 	}
 
@@ -50,7 +50,7 @@ public class VirtualPet {
 		return sleepy;
 	}
 
-	private void setSleepy(int sleepy) {
+	public void setSleepy(int sleepy) {
 		this.sleepy = boundsFit(sleepy);
 	}
 
@@ -58,7 +58,7 @@ public class VirtualPet {
 		return thirst;
 	}
 
-	private void setThirst(int thirst) {
+	public void setThirst(int thirst) {
 		this.thirst = boundsFit(thirst);
 	}
 
@@ -66,7 +66,7 @@ public class VirtualPet {
 		return happy;
 	}
 
-	private void setHappy(int happy) {
+	public void setHappy(int happy) {
 		this.happy = boundsFit(happy);
 	}
 
@@ -85,56 +85,59 @@ public class VirtualPet {
 	private void setDescription(String description) {
 		this.description = description;
 	}
-	
+
 	public boolean feed() {
 		setHunger(getHunger() - 15);
-		setThirst(getThirst() +5 );
+		setThirst(getThirst() + 5);
 		setHappy(getHappy() + 5);
-		setPoopy(getPoopy() +15);
-		setHealth(getHealth() +5);
-		setSleepy(getSleepy() +10);
+		setPoopy(getPoopy() + 15);
+		setHealth(getHealth() + 5);
+		setSleepy(getSleepy() + 10);
 		return true;
 	}
-	
+
 	public boolean water() {
-		setThirst(getThirst() -15 );
+		setThirst(getThirst() - 15);
 		setHappy(getHappy() + 2);
-		setPoopy(getPoopy() +5);
-		setHealth(getHealth() +1);
+		setPoopy(getPoopy() + 5);
+		setHealth(getHealth() + 1);
 		return true;
 	}
-	
+
 	public boolean walk() {
 		setHunger(getHunger() + 5);
-		setThirst(getThirst() + 5 );
+		setThirst(getThirst() + 5);
 		setHappy(getHappy() + 10);
-		setPoopy(getPoopy() -25);
-		setHealth(getHealth() +2);
-		setSleepy(getSleepy() +5);
+		setPoopy(getPoopy() - 25);
+		setHealth(getHealth() + 2);
+		setSleepy(getSleepy() + 5);
 		return true;
 	}
-	
+
 	public boolean sleep() {
 		setHunger(getHunger() + 20);
-		setThirst(getThirst() + 10 );
+		setThirst(getThirst() + 10);
 		setHappy(getHappy() + 2);
 		setPoopy(getPoopy() + 10);
 		setHealth(getHealth() + 2);
 		setSleepy(getSleepy() - 40);
 		return true;
 	}
-	
+
 	public boolean play() {
 		setHunger(getHunger() + 5);
-		setThirst(getThirst() + 10 );
+		setThirst(getThirst() + 10);
 		setHappy(getHappy() + 15);
 		setHealth(getHealth() + 1);
 		setSleepy(getSleepy() + 10);
 		return true;
 	}
+
 	private int boundsFit(int num) {
-		if (num < 0) num = 0;
-		if (num > 100) num = 100;
+		if (num < 0)
+			num = 0;
+		if (num > 100)
+			num = 100;
 		return num;
 	}
 }
