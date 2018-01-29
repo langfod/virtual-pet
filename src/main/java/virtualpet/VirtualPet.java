@@ -86,6 +86,16 @@ public class VirtualPet {
 		this.description = description;
 	}
 	
+	public boolean feed() {
+		setHunger(getHunger() - 15);
+		setThirst(getThirst() +5 );
+		setHappy(getHappy() + 5);
+		setPoopy(getPoopy() +15);
+		setHealth(getHealth() +5);
+		setSleepy(getSleepy() +10);
+		return true;
+	}
+	
 	private int boundsFit(int num) {
 		if (num < 0) num = 0;
 		if (num > 100) num = 100;
