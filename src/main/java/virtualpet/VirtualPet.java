@@ -114,6 +114,15 @@ public class VirtualPet {
 		return true;
 	}
 	
+	public boolean sleep() {
+		setHunger(getHunger() + 20);
+		setThirst(getThirst() + 10 );
+		setHappy(getHappy() + 2);
+		setPoopy(getPoopy() + 10);
+		setHealth(getHealth() + 2);
+		setSleepy(getSleepy() - 40);
+		return true;
+	}
 	private int boundsFit(int num) {
 		if (num < 0) num = 0;
 		if (num > 100) num = 100;
