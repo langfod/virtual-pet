@@ -82,5 +82,16 @@ public class VirtualPetTest {
 		Assert.assertEquals(91, mypet.getHealth());
 	}
 	
+	@Test public void walkPetCheckNewValues() {
+		VirtualPet mypet = new VirtualPet();
+		mypet.walk();
+		Assert.assertEquals(25, mypet.getHunger());	
+		Assert.assertEquals(25, mypet.getThirst());
+		Assert.assertEquals(100, mypet.getHappy());
+		Assert.assertEquals(0, mypet.getPoopy());
+		Assert.assertEquals(92, mypet.getHealth());
+		Assert.assertEquals(15, mypet.getSleepy());
+	}
+	
 	
 }
