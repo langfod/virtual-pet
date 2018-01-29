@@ -123,6 +123,15 @@ public class VirtualPet {
 		setSleepy(getSleepy() - 40);
 		return true;
 	}
+	
+	public boolean play() {
+		setHunger(getHunger() + 5);
+		setThirst(getThirst() + 10 );
+		setHappy(getHappy() + 15);
+		setHealth(getHealth() + 1);
+		setSleepy(getSleepy() + 10);
+		return true;
+	}
 	private int boundsFit(int num) {
 		if (num < 0) num = 0;
 		if (num > 100) num = 100;
