@@ -96,6 +96,15 @@ public class VirtualPet {
 		return true;
 	}
 	
+	public boolean water() {
+		setThirst(getThirst() -15 );
+		setHappy(getHappy() + 2);
+		setPoopy(getPoopy() +5);
+		setHealth(getHealth() +1);
+		return true;
+	}
+	
+	
 	private int boundsFit(int num) {
 		if (num < 0) num = 0;
 		if (num > 100) num = 100;
