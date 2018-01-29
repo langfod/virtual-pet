@@ -1,8 +1,4 @@
-# Project Title
-
-Virtual Pet
-
-## Getting Started
+# Virtual Pet
 
 The VirtualPatApp is a console app that will allow the user to interact with your very own virtual pet, ThortonBurg the Blue Bellied Snark.
 
@@ -16,6 +12,6 @@ Actions will change the attributes of the virtual pet and some attribute levels 
 
 ## Authors
 
-* **David Langfrod** - [langfod](https://github.com/)langfod
+* **David Langford** - [langfod](https://github.com/langfod)
 
 
