@@ -1,3 +1,12 @@
+/*
+ * VirtualPet:
+ * class to implement a VirtualPet.
+ * 
+ * Author: David Langford
+ * Date  : Jan 26, 2018
+ * 
+ */
+
 package virtualpet;
 
 public class VirtualPet {
